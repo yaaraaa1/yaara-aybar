@@ -17,21 +17,11 @@ body {
   min-width: 760px;
   box-sizing: border-box;
   height: calc(100% - 40px); /*Adjust height to fit within the window */
-  margin: 20px; /* Create margins around the page */
+  /* margin: 20px; Create margins around the page */
   background-color: #212121;
 }
 
 /* typography */
-
-#circle {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 100px;
-  left: 100px;
-  color: lightblue
-}
-
 
 h1, h2, h3 {
   font-family: 'Segoe UI';
@@ -118,7 +108,7 @@ img {
   padding: 0;
   /* height: 100%; */
   overflow: hidden; /* Prevent scrolling */
-  height: calc(100% - 20px); /*Adjust height to fit within the window */
+  /* height: calc(100% - 20px); Adjust height to fit within the window */
 }
 
 nav {
