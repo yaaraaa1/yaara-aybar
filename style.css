@@ -1,5 +1,4 @@
 /* General setup */
-
 html, body {
   margin: 0;
   padding: 0;
@@ -11,18 +10,22 @@ html {
   font-size: 10px;
 }
 
+body.home-page {
+  width: 100%;
+  padding: 0;
+  height: 100%;
+}
+
 body {
-  width: calc(100% - 40px); /* Adjust width to create wider margins */
-  padding: 50px; /* Uniform padding for all sides */
+  width: calc(100% - 40px);
+  padding: 50px;
   min-width: 760px;
   box-sizing: border-box;
-  height: calc(100% - 40px); /*Adjust height to fit within the window */
-  /* margin: 20px; Create margins around the page */
+  height: calc(100% - 40px);
   background-color: #212121;
 }
 
 /* typography */
-
 h1, h2, h3 {
   font-family: 'Segoe UI';
   color: white;
@@ -36,28 +39,27 @@ p, input, li {
 h1 {
   font-size: 5rem;
   text-align: center;
-  margin: 20px 0; /* Added margin for spacing */
+  margin: 20px 0;
 }
 
 h2 {
   font-size: 3rem;
   text-align: center;
-  margin: 10px 0; /* Added margin for spacing */
+  margin: 10px 0;
 }
 
 h3 {
   font-size: 2.2rem;
-  margin: 10px 0; /* Added margin for spacing */
+  margin: 10px 0;
 }
 
 p, li {
   font-size: 1.8rem;
   line-height: 1.5;
-  margin: 10px 0; /* Added margin for spacing */
+  margin: 10px 0;
 }
 
 /* header layout */
-
 header {
   display: flex;
   flex-flow: row wrap;
@@ -98,17 +100,15 @@ h2 {
 .profile-container img {
   border-radius: 50%;
   margin-left: 150px;
-  margin-right: 100px; /* Adjust the margin as needed */
-  max-width: 500px; /* Set a max width for the image */
-  height: auto; /* Maintain aspect ratio */
+  margin-right: 100px;
+  max-width: 500px;
+  height: auto;
 }
 
 img {
   margin: 0;
   padding: 0;
-  /* height: 100%; */
-  overflow: hidden; /* Prevent scrolling */
-  /* height: calc(100% - 20px); Adjust height to fit within the window */
+  overflow: hidden;
 }
 
 nav {
@@ -130,7 +130,7 @@ nav li {
   display: inline;
   text-align: center;
   flex: 1;
-  padding: 20px; /* Adjusted padding */
+  padding: 20px;
 }
 
 nav a, nav span {
@@ -146,23 +146,22 @@ nav a, nav span {
 }
 
 /* main layout */
-
 main {
   display: flex;
   flex: 1;
-  flex-direction: column; /* Adjust flex direction if necessary */
+  flex-direction: column;
 }
 
 article, section {
   flex: 4;
-  margin: 10px; /* Added margin for spacing */
+  margin: 10px;
 }
 
 aside {
   flex: 1;
   margin-left: 10px;
   padding: 1%;
-  margin: 10px; /* Added margin for spacing */
+  margin: 10px;
 }
 
 aside a {
@@ -209,6 +208,12 @@ tfoot td {
 }
 
 footer {
-  margin-top: 20px; /* Increased margin for more spacing */
-  padding: 20px; /* Added padding for spacing */
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  display: block;
 }
