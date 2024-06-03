@@ -10,20 +10,21 @@ html {
   font-size: 10px;
 }
 
+body {
+  width: 100%;
+  padding: 0px;
+  min-width: 760px;
+  box-sizing: border-box;
+  height: 100%;
+  background-color: #212121;
+}
+
 body.home-page {
   width: 100%;
   padding: 0;
   height: 100%;
 }
 
-body {
-  width: calc(100% - 40px);
-  padding: 50px;
-  min-width: 760px;
-  box-sizing: border-box;
-  height: calc(100% - 40px);
-  background-color: #212121;
-}
 
 /* typography */
 h1, h2, h3 {
