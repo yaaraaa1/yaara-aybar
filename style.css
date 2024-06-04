@@ -11,7 +11,7 @@ html {
 
 body {
   width: 100%;
-  padding: 0px;
+  padding: 25px;
   min-width: 760px;
   box-sizing: border-box;
   height: 100%;
@@ -54,7 +54,7 @@ h3 {
 }
 
 p, li {
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 1.5;
   margin: 35px;
 }
@@ -94,21 +94,22 @@ h2 {
   display: flex;
   align-items: flex-start;
   text-align: left;
-  margin-right: 150px;
 }
 
 .profile-container img {
-  border-radius: 50%;
+  /* border-radius: 50%; */
   margin-left: 150px;
   margin-right: 100px;
-  max-width: 500px;
   height: auto;
+  width: 100%;
+  text-align: center;
 }
 
 img {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  text-align: center;
 }
 
 nav {
@@ -180,6 +181,7 @@ table {
   font-size: 16px;
   letter-spacing: 1px;
   color: white;
+  margin: 25px;
 }
 
 thead, tfoot {
@@ -212,6 +214,20 @@ tfoot td {
 footer {
   margin-top: 20px;
   padding: 20px;
+}
+
+/* Hide hover images by default */
+.hover-image {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Show hover image when the corresponding area is hovered */
+.hover-area:hover + .hover-image {
+  display: block;
 }
 
 .responsive-image {
