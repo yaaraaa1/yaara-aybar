@@ -3,11 +3,12 @@ window.addEventListener('load', adjustObjects);
 
 function adjustObjects() {
   const objects = [
-    { id: 'folder', buttom: 0, left: 50 },
-    { id: 'tab', top: 0, left: 1150 },
-    { id: 'tea', top: 150, left: 30 },
-    { id: 'notes', top: 300, right: 80 },
-    { id: 'headline', top: 300, right: 80 }
+    { id: 'folder', bottom: 0, left: 50, href: 'resume.html' },
+    { id: 'tab', top: 0, left: 1150, href: 'about.html' },
+    { id: 'tea', top: 150, left: 30, href: 'projects.html' },
+    { id: 'notes', top: 300, right: 80, href: 'https://linkedin.com/in/yaara-aybar' },
+    { id: 'headline', top: 300, right: 80, href: 'index.html'},
+    { id: 'menu', top: 0, left: 0, href: '#' } // Add the menu bar
   ];
 
   objects.forEach(obj => {
@@ -50,7 +51,15 @@ function adjustObjects() {
       element.style.width = `${originalWidth * scale}px`;
       element.style.height = `${originalHeight * scale}px`;
     }
-  });
+
+    // Add click event listener to each element
+    element.addEventListener('click', () => {
+        window.location.href = obj.href;
+      });
+
+    // Add CSS to make the element appear clickable
+    element.style.cursor = 'pointer';
+    });
 }
 
 function positionHeadline(element) {
