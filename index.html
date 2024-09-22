@@ -9,21 +9,25 @@
   </head>
   <body class="home-page">
     <div class="image-container">
-      <img src="desk.png" alt="Yaara's desk" id="desk" usemap="#image-map" class="responsive-image">
+      <img src="folder.png" alt="Folder" class="responsive-object" id="folder">
+      <img src="headline.png" alt="Headline" class="responsive-object" id="headline">
+      <img src="tab.png" alt="Tab" class="responsive-object" id="tab">
+      <img src="tea.png" alt="Tea" class="responsive-object" id="tea">
+      <img src="notes.png" alt="Notes" class="responsive-object" id="notes">
       <div class="hover-layer">
-          <img src="hover-image-tea.png" alt="Hover Image" class="hover-image" id="hover-image-tea">
-          <img src="hover-image-folder.png" alt="Hover Image" class="hover-image" id="hover-image-folder">
-          <img src="hover-image-notes.png" alt="Hover Image" class="hover-image" id="hover-image-notes">
-          <img src="hover-image-tab.png" alt="Hover Image" class="hover-image" id="hover-image-tab">
+          <img src="hover-image-tea.png" alt="Hover Image" class="hover-image" data-hover-target="hover-image-tea">
+          <img src="hover-image-folder.png" alt="Hover Image" class="hover-image" data-hover-target="hover-image-folder">
+          <img src="hover-image-notes.png" alt="Hover Image" class="hover-image" data-hover-target="hover-image-notes">
+          <img src="hover-image-tab.png" alt="Hover Image" class="hover-image" data-hover-target="hover-image-tab">
       </div>
     </div>
     <map name="image-map" id="image-map">
-      <area shape="circle" data-coords="200,330,80" alt="tea" href="projects.html" class="hover-area" data-hover-target="hover-image-tea">
-      <area shape="rect" data-coords="600,660,730,720" alt="folder" href="resume.html" class="hover-area" data-hover-target="hover-image-folder">
-      <area shape="rect" data-coords="1150,0,1800,350" alt="tablet" href="about.html" class="hover-area" data-hover-target="hover-image-tab">
-      <area shape="rect" data-coords="1140,950,1180,975" alt="email" href="mailto:yaara.aybar@outlook.com" class="hover-area" data-hover-target="hover-image-notes">
-      <area shape="rect" data-coords="1130,990,1200,1020" alt="LinkedIn" href="https://linkedin.com/in/yaara-aybar" class="hover-area" data-hover-target="hover-image-notes">
-  </map>  
-  <script src="script.js"></script>
+      <area shape="circle" data-coords="200,330,80" alt="tea" href="projects.html" class="hover-area" data-hover-target="hover-image-tea" id="projects-map">
+      <area shape="rect" data-coords="600,660,730,720" alt="folder" href="resume.html" class="hover-area" data-hover-target="hover-image-folder" id="folder-map">
+      <area shape="rect" data-coords="1150,0,1800,350" alt="tablet" href="about.html" class="hover-area" data-hover-target="hover-image-tab" id="about-map">
+      <area shape="rect" data-coords="1140,950,1180,975" alt="email" href="mailto:yaara.aybar@outlook.com" class="hover-area" data-hover-target="hover-image-notes" id="email-map">
+      <area shape="rect" data-coords="1130,990,1200,1020" alt="LinkedIn" href="https://linkedin.com/in/yaara-aybar" class="hover-area" data-hover-target="hover-image-notes" id="linkedin-map">
+    </map>  
+    <script src="script.js"></script>
   </body>
 </html>

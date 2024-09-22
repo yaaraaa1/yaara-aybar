@@ -1,221 +1,70 @@
-/* General setup */
-html, body {
+body.home-page {
   margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-html {
-  font-size: 10px;
+  font-family: 'Roboto Condensed', sans-serif;
+  background: url('blank-desk.png') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden; /* Prevent scrolling on the index.html page */
 }
 
 body {
-  width: 100%;
-  padding: 25px;
-  min-width: 760px;
-  box-sizing: border-box;
-  height: 100%;
-  background-color: #212121;
-}
-
-body.home-page {
-  width: 100%;
-  padding: 0;
-  height: 100%;
-}
-
-
-/* typography */
-h1, h2, h3 {
-  font-family: 'Segoe UI';
-  color: white;
-}
-
-p, input, li {
-  font-family: 'Segoe UI', sans-serif;
-  color: white;
-}
-
-h1 {
-  font-size: 5rem;
-  text-align: center;
-  margin: 35px;
-}
-
-h2 {
-  font-size: 3rem;
-  text-align: center;
-  margin: 35px;
-}
-
-h3 {
-  font-size: 2.2rem;
-  margin: 35px 0;
-}
-
-p, li {
-  font-size: 2rem;
-  line-height: 1.5;
-  margin: 35px;
-}
-
-/* header layout */
-header {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-main, header, nav, article, aside, footer, section {
-  background-color: #212121;
-}
-
-h1 {
-  flex: 5;
-  text-transform: uppercase;
-}
-
-h2 {
-  text-align: left;
-}
-
-/* .image-container {
-  padding-top: 20.15px;
-  text-align: center;
-} */
-
-.image-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.profile-container {
-  padding-top: 20.15px;
-  text-align: center;
-  display: flex;
-  align-items: flex-start;
-  text-align: left;
-}
-
-.profile-container img {
-  /* border-radius: 50%; */
-  margin-left: 150px;
-  margin-right: 100px;
-  height: auto;
-  width: 100%;
-  text-align: center;
-}
-
-img {
   margin: 0;
-  padding: 0;
-  overflow: hidden;
-  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
-nav {
-  height: 50px;
-  flex: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 1800px; /* Ensure the container does not exceed the original image size */
+  height: 1020px; /* Set the height to match the original image height */
+  margin: 0 auto; /* Center the container */
 }
 
-nav ul {
-  padding: 0;
-  list-style-type: none;
-  flex: 2;
-  display: flex;
+.responsive-object {
+  position: absolute;
+  transition: transform 0.2s; /* Smooth transition for hover effect */
 }
 
-nav li {
-  display: inline;
-  text-align: center;
-  flex: 1;
-  padding: 20px;
+.responsive-object:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
-nav a, nav span {
-  display: inline-block;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 2rem;
-  height: 3rem;
-  line-height: 1.7;
-  text-transform: lowercase;
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
+#tab {
+  top: 0;
+  right: 0;
+  position: fixed; /* Position the tab image relative to the window */
 }
 
-/* main layout */
-main {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
+#folder {
+  bottom: 0;
+  position: fixed; /* Position the folder image relative to the window */
 }
 
-article, section {
-  flex: 4;
-  margin: 10px;
+#notes {
+  right: 50;
+  position: fixed;
 }
 
-aside {
-  flex: 1;
-  margin-left: 10px;
-  padding: 1%;
-  margin: 10px;
-}
+/* @media (max-width: 900px) {
+    #headline {
+      top: 400px;
+      left: 170px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      position: fixed;
+    }
+  }
 
-aside a {
-  display: block;
-  float: left;
-  width: 50%;
-}
-
-aside img {
-  max-width: 100%;
-}
-
-table {
-  border-collapse: collapse;
-  font-family: 'Segoe UI';
-  font-size: 16px;
-  letter-spacing: 1px;
-  color: white;
-  margin: 25px;
-}
-
-thead, tfoot {
-  background-color: #212121;
-  color: white;
-}
-
-th, td {
-  padding: 8px 10px;
-  color: white;
-}
-
-
-td:last-of-type {
-  text-align: left;
-}
-
-tbody > tr:nth-of-type(even) {
-  background-color: #212121;
-}
-
-tfoot th {
-  text-align: right;
-}
-
-tfoot td {
-  font-weight: bold;
-}
-
-footer {
-  margin-top: 20px;
-  padding: 20px;
-}
+  @media (min-width: 1200px) {
+    #headline {
+      top: 200px;
+      left: 300px;
+      display: flex;
+      justify-content: center;
+      width: 30%;
+    }
+  } */
 
 .hover-layer {
   position: absolute;
@@ -228,21 +77,26 @@ footer {
 
 .hover-image {
   display: none;
-  width: 100%;
-  height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
 }
 
-/* 
-/* Show hover image when the corresponding area is hovered */
-/* .hover-area:hover + .hover-image {
-  display: block; */
-/* } */ */
-
-.responsive-image {
-  width: 100%;
-  height: auto;
+.hover-area:hover + .hover-layer .hover-image[data-hover-target="hover-image-tea"] {
   display: block;
+}
+
+.hover-area:hover + .hover-layer .hover-image[data-hover-target="hover-image-folder"] {
+  display: block;
+}
+
+.hover-area:hover + .hover-layer .hover-image[data-hover-target="hover-image-tab"] {
+  display: block;
+}
+
+.hover-area:hover + .hover-layer .hover-image[data-hover-target="hover-image-notes"] {
+  display: block;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 20px;
 }
